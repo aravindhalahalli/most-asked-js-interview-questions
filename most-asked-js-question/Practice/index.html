@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            background-color: lightblue;
+            overflow-y: scroll;
+        }
+
+        #content {
+            height: 1500px;
+        }
+
+        #grand-parent,
+        #parent,
+        #child {
+            min-width: 200px;
+            min-height: 200px;
+            border: 1px solid black;
+            background-color: aqua;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.youtube-nocookie.com/">No cookie</a>
+    <h1>Debounce</h1>
+    <input type="text" name="search" onkeyup="betterFetchData()" />
+   
+    
+    <h1>Throttle</h1>
+    <div id="box">
+        <div id="content"></div>
+    </div>
+    <hr />
+
+    <h1>Event bubbling / capturing</h1>
+    <div id="grand-parent">
+        Grand Parent
+        <div id="parent">
+            Parent
+            <div id="child">Child</div>
+        </div>
+    </div>
+
+    <br />
+    <div id="products">
+        Event delegation
+        <ul id="category">
+            <li id="laptop">laptop</li>
+            <li id="shoes">shoes</li>
+            <li id="dress">dress</li>
+            <li id="camera">camera</li>
+        </ul>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
